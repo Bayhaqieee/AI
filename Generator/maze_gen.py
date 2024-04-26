@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import random
+import os
 import pygame  # needed only if running stand-alone and showing maze generation. (If not imported code must be modified, though.)
 from os.path import exists
 from sys import exit
+from PIL import Image
 
 
 class Maze:
@@ -12,8 +14,6 @@ class Maze:
     Returns either
         a (y, x, 2) size Numpy Array with 0 as a passage and 1 as a wall for the down and right walls of each cell; outer edges are always walls.
         a (y * 2 + 1, x * 2 + 1) size Numpy Array with 0 as a corridor and 1 as a wall block; outer edges are wall blocks.
-
-    @author: kalle
     """
 
     def __init__(self, size_x, size_y):
@@ -192,11 +192,7 @@ class Maze:
             if not exists(file_name):
                 pygame.image.save(self.screen, file_name)
                 break          
-
-
-
-
-
+    
 if __name__ == '__main__':
 
     # Run and display the Maze.
@@ -209,7 +205,7 @@ if __name__ == '__main__':
     rect = np.array([0, 0, disp_size[0], disp_size[1]])  # the rect inside which to draw the maze. Top x, top y, width, height.
     block_size = 10  # block size in pixels
     screen = pygame.display.set_mode(disp_size)
-    pygame.display.set_caption('Maze Generator / KS 2022')
+    pygame.display.set_caption('Maze Generator / Bayhaqie Modifications')
     running = True
 
     while running:
