@@ -3,10 +3,14 @@ from model import model
 # Observed data
 observations = [
     "umbrella",
+    "no umbrella",
+    "no umbrella",
     "umbrella",
     "no umbrella",
     "umbrella",
     "umbrella",
+    "no umbrella",
+    "no umbrella",
     "umbrella",
     "umbrella",
     "no umbrella",

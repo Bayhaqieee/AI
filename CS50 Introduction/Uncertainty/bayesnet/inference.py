@@ -2,7 +2,8 @@ from model import model
 
 # Calculate predictions
 predictions = model.predict_proba({
-    "train": "delayed"
+    "train": "on time",
+    "rain" : "heavy"
 })
 
 # Print predictions for each node

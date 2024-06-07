@@ -2,16 +2,16 @@ from pomegranate import *
 
 # Define starting probabilities
 start = DiscreteDistribution({
-    "sun": 0.5,
-    "rain": 0.5
+    "sun": 0.6,
+    "rain": 0.4
 })
 
 # Define transition model
 transitions = ConditionalProbabilityTable([
-    ["sun", "sun", 0.8],
-    ["sun", "rain", 0.2],
-    ["rain", "sun", 0.3],
-    ["rain", "rain", 0.7]
+    ["sun", "sun", 0.6],
+    ["sun", "rain", 0.5],
+    ["rain", "sun", 0.4],
+    ["rain", "rain", 0.8]
 ], [start])
 
 # Create Markov chain
