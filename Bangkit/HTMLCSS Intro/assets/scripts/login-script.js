@@ -5,13 +5,17 @@
  * Gunakan fungsi showPopUp() untuk menampilkan pop up error
  */
 
+
+// Set Variabel untuk menyambungkan file
 const loginFormElement = document.querySelector('#loginForm');
 const inputEmailElement = document.querySelector('#inputEmail');
 const inputPasswordElement = document.querySelector('#inputPassword');
 
+/* Variabel untuk menyimpan password*/
 const expectedEmail = 'admin@dicoding.com';
 const expectedPassword = 'superpassword';
 
+/* Main Function */
 loginFormElement.addEventListener('submit', function(event) {
     event.preventDefault();
     // TODO 1 : Mendapatkan input email dan password pengguna dari form.
